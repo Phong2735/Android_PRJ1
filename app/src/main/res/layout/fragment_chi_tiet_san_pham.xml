@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".DSMatHang.ChiTietSanPhamFragment">
+
+    <!-- TODO: Update blank fragment layout --><androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+    android:backgroundTint="@color/toolbar">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/btnBack"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/lblchitietsanpham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:text="Chi tiết sản phẩm"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/btnCart"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_shopping_cart"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/slideImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_home" />
+            <TextView
+                android:id="@+id/lblProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quần Jean Nam NTB 440"
+                android:textSize="23dp"
+                android:layout_below="@id/slideImage"
+                android:textColor="@color/red"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:id="@+id/lblProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="225000VND"
+                android:layout_below="@id/lblProductName"
+                android:textSize="20dp"
+                android:layout_alignStart="@id/lblProductName"
+                android:textColor="@color/red"/>
+            <TextView
+                android:id="@+id/lblProductDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MÔ TẢ SẢN PHẨM"
+                android:layout_below="@id/lblProductPrice"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+             <TextView
+                android:id="@+id/fldProDuctDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Không có mô tả sản phẩm"
+                android:textSize="12dp"
+                android:layout_below="@id/lblProductDescription"
+                android:layout_alignStart="@id/lblProductName"
+                android:background="@drawable/custom_border"/>
+            <TextView
+                android:id="@+id/lblchosecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHỌN MÀU: "
+                android:layout_below="@id/fldProDuctDescription"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@id/lblProductName"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvProductColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblchosecolor"
+                android:background="@drawable/custom_border"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignStart="@id/lblProductName"/>
+            <TextView
+                android:id="@+id/lblProductAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng số lượng"
+                android:layout_below="@id/rcvProductColor"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/lblPaymentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng tiền"
+                android:layout_below="@id/lblProductAmount"
+                android:layout_marginLeft="30dp"
+                android:textSize="12dp"/>
+            <Button
+                android:id="@+id/btnAddtoCart"
+                android:layout_width="189dp"
+                android:layout_height="wrap_content"
+                android:text="THÊM VÀO GIỎ HÀNG"
+                android:layout_below="@id/lblPaymentAmount"
+                android:textColor="@color/toolbar"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:id="@+id/btnCreatOrder"
+                android:layout_width="189dp"
+                android:layout_height="wrap_content"
+                android:text="TẠO ĐƠN HÀNG"
+                android:backgroundTint="@color/red"
+                android:layout_below="@id/lblPaymentAmount"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

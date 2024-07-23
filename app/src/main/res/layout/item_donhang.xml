@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/xam"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="15dp">
+            <TextView
+                android:id="@+id/txtCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DH20211001/162613026"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnCancelOder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HỦY"
+                android:backgroundTint="@color/red"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/lbldate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày tạo đơn: "
+                android:layout_below="@id/txtCode"
+                android:layout_marginLeft="10dp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/Odercreatedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/10/2021 16:26:19"
+                android:layout_below="@id/txtCode"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/lbldate"
+            android:layout_marginTop="15dp"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lblstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái: "
+                android:layout_below="@id/view"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/Oderstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đơn hàng mới"
+                android:layout_below="@id/view"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lblkh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khách hàng: "
+                android:layout_below="@id/lblstatus"
+                android:layout_marginLeft="10dp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/Odercustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hải vinh"
+                android:layout_below="@id/Oderstatus"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lblsl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng: "
+                android:layout_below="@id/lblkh"
+                android:layout_marginLeft="10dp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/Oderamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="110.0"
+                android:layout_below="@id/lblkh"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lbltongtien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng tiền: "
+                android:layout_below="@id/lblsl"
+                android:layout_marginLeft="10dp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/Odertotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24,750,000 VND"
+                android:textSize="20dp"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:layout_below="@id/lblsl"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

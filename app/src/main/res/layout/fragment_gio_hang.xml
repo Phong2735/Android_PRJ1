@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GioHang.GioHangFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:backgroundTint="@color/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/btnBack"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblTrangChu"
+                android:text="Giỏ hàng"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:id="@+id/btnCart"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_shopping_cart"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="20dp"/>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/lblchonsp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Không có sản phẩm nào trong giỏ hàng"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/btnchonsp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIẾP TỤC CHỌN SẢN PHẨM"
+        android:textColor="@color/toolbar"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lblchonsp"
+        android:layout_marginTop="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvgiohang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/groupLayout"
+        />
+    <RelativeLayout
+        android:id="@+id/groupLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="169dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnDeleteAll"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="XÓA TẤT CẢ"
+            android:textColor="@color/toolbar"
+            android:layout_alignParentBottom="true"/>
+
+        <Button
+            android:id="@+id/btnCreatOrder"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="TẠO ĐƠN HÀNG"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <View
+            android:id="@+id/viewbot"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_above="@id/btnDeleteAll"/>
+
+        <TextView
+            android:id="@+id/lbltongtien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiền"
+            android:textSize="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@id/viewbot"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="43,999,000 VND"
+            android:textColor="@color/red"
+            android:layout_alignParentRight="true"
+            android:layout_above="@id/viewbot"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng số lượng"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:layout_above="@id/lbltongtien"/>
+
+        <TextView
+            android:id="@+id/soluong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="335"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_above="@id/lbltongtien"/>
+
+        <View
+            android:id="@+id/viewtop"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@id/soluong"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".KhachHang.ThongtinkhachhangFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/lblthongtinkhachhang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THÔNG TIN KHÁCH HÀNG"
+        android:textColor="@color/red"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="30dp"/>
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-3dp"
+        android:padding="20dp"
+        android:src="@drawable/ic_logout_" />
+
+    <TextView
+        android:id="@+id/lblCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã khách hàng(*):"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/toolbar"
+        android:layout_below="@id/lblthongtinkhachhang"/>
+    <EditText
+        android:id="@+id/txtCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblCode"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lbltenkh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên khách hàng(*):"
+        android:textColor="@color/toolbar"
+        android:textSize="15dp"
+        android:layout_below="@id/txtCode"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbltenkh"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lblPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại(*):"
+        android:textColor="@color/toolbar"
+        android:textSize="15dp"
+        android:layout_below="@id/txtName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblPhone"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lblAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ(*):"
+        android:textColor="@color/toolbar"
+        android:textSize="15dp"
+        android:layout_below="@id/txtPhone"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/txtAdress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblAdress"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textColor="@color/toolbar"
+        android:textSize="15dp"
+        android:layout_below="@id/txtAdress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblEmail"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lblDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mô tả:"
+        android:textColor="@color/toolbar"
+        android:textSize="15dp"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblDescription"
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="CẬP NHẬT THÔNG TIN KHÁCH HÀNG"
+        android:layout_below="@id/txtDescription" />
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XÓA THÔNG TIN KHÁCH HÀNG"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/btnUpdate"/>
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THÊM KHÁCH HÀNG MỚI"
+        android:layout_below="@id/txtDescription"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
+</RelativeLayout>

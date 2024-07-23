@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".KhachHang.KhachHangFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:backgroundTint="@color/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/btnBack"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblKhachHang"
+                android:text="Khách hàng"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:id="@+id/btnCart"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_shopping_cart"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="20dp"/>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <EditText
+        android:id="@+id/txtSearchInput"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:hint="Tìm kiếm"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/custom_border"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btnSearchKH"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="Tìm kiếm"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/red"
+        android:layout_toEndOf="@id/txtSearchInput"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/lblchonkh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khách hàng đang chọn"
+        android:textSize="20dp"
+        android:textColor="@color/toolbar"
+        android:layout_below="@id/txtSearchInput"
+        android:layout_alignStart="@id/txtSearchInput"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/fldChosenCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/lblchonkh"
+        android:background="@drawable/custom_border"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <TextView
+        android:id="@+id/lbldskhachhang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DANH SÁCH KHÁCH HÀNG"
+        android:textSize="21dp"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:layout_below="@id/fldChosenCustomer"
+        android:layout_alignStart="@id/txtSearchInput"
+        android:layout_marginTop="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvkhachhang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbldskhachhang"
+        android:layout_alignStart="@id/txtSearchInput"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"/>
+    <Button
+        android:id="@+id/btnAddCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="THÊM KHÁCH HÀNG MỚI"
+        android:backgroundTint="@color/red"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+</RelativeLayout>
